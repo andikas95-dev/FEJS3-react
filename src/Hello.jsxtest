@@ -1,0 +1,13 @@
+import { useState } from 'react';
+
+function Hello({ name, setName, onChangeNama }) {
+  return (
+    <>
+      <h1>{name}</h1>
+      <input type="text" value={name} onChange={onChangeNama} />
+      <button onClick={setName}>change Name</button>
+    </>
+  );
+}
+
+export default Hello;

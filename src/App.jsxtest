@@ -1,0 +1,94 @@
+import React, { useState } from 'react';
+import Hello from './Hello';
+import './App.css';
+
+function App() {
+  // const [nama1, setNama1] = useState('Nanda');
+  // const [nama2, setNama2] = useState('Alvian');
+  // const [nama3, setNama3] = useState('Rahayu');
+  // const [nama4, setNama4] = useState('Maya');
+  // const [nama5, setNama5] = useState('Himma');
+
+  const [list, setList] = useState([
+    {
+      name: 'andika',
+      age: 26,
+      city: 'Surabaya',
+    },
+    {
+      name: 'nanda',
+      age: 20,
+      city: 'Malang',
+    },
+    {
+      name: 'kezia',
+      age: 25,
+      city: 'Jogja',
+    },
+    {
+      name: 'Mohammad Hidayatullah',
+      age: 23,
+      city: 'Madura',
+    },
+    {
+      name: 'Rahayu',
+      age: 22,
+      city: 'Bali',
+    },
+  ]);
+
+  return (
+    <>
+      {list.map((item, i) => (
+        <div key={i}>
+          <h1>Nama :{item.name}</h1>
+          <h1>Umur : {item.age}</h1>
+          <h1>Kota : {item.city}</h1>
+        </div>
+      ))}
+      
+      <button
+        onClick={() =>
+          setList((prev) => {
+            const data = [...prev];
+            data.push({
+              name: 'Rega',
+              age: 23,
+              city: 'lombok',
+            });
+            return data;
+          })
+        }
+      >
+        tambah rega
+      </button>
+      {/* <Hello
+        name={nama1}
+        onChangeNama={(e) => setNama1(e.target.value)}
+        setName={() => setNama1('Nanda')}
+      />
+      <Hello
+        name={nama2}
+        onChangeNama={(e) => setNama2(e.target.value)}
+        setName={() => setNama2('Alvian')}
+      />
+      <Hello
+        name={nama3}
+        onChangeNama={(e) => setNama3(e.target.value)}
+        setName={() => setNama3('Rahayu')}
+      />
+      <Hello
+        name={nama4}
+        onChangeNama={(e) => setNama4(e.target.value)}
+        setName={() => setNama4('Maya')}
+      />
+      <Hello
+        name={nama5}
+        onChangeNama={(e) => setNama5(e.target.value)}
+        setName={() => setNama5('Himma')}
+      /> */}
+    </>
+  );
+}
+
+export default App;
