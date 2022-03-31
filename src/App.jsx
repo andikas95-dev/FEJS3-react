@@ -1,6 +1,7 @@
 // import Hello from './Hello';
 // import Header from './components/Header/Header';
 import React, { useState } from 'react';
+import { Button, Col, Row } from 'reactstrap';
 import { Header, NewComponent } from './components/Header/Header';
 import './App.css';
 
@@ -73,9 +74,52 @@ function App() {
             setLoginData((prev) => ({ ...prev, password: e.target.value }))
           }
         />
-        <button type="submit">submit</button>
+        <Button type="submit" color="primary" outline>
+          submit
+        </Button>
       </form>
       {/* <button onClick={() => changeNama()}>change name</button> */}
+      <Row>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+        <Col md={1} style={{ border: '1px solid tomato' }}>
+          <p>Test</p>
+        </Col>
+      </Row>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './header.module.css';
 
 function Header({ nama, alamat, gantiNama, text, umur }) {
