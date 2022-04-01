@@ -52,6 +52,7 @@ function Home() {
       console.log(error);
     }
   };
+
   const createDataPost = async () => {
     try {
       await axios.post('http://localhost:3000/tamu', newData);
@@ -60,6 +61,29 @@ function Home() {
         nama: '',
         alamat: '',
       });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateDataPost = async () => {
+    try {
+      await axios.put(`http://localhost:3000/tamu/${id}`, newData);
+      getDataTodos();
+      setId();
+      setNewData({
+        nama: '',
+        alamat: '',
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteDataPost = async (idDelete) => {
+    try {
+      await axios.delete(`http://localhost:3000/tamu/${idDelete}`);
+      getDataTodos();
     } catch (error) {
       console.log(error);
     }
@@ -87,7 +111,20 @@ function Home() {
           }))
         }
       />
-      <button onClick={() => createDataPost()}>Create</button>
+      <button onClick={!id ? createDataPost : updateDataPost}>
+        {!id ? 'Create' : 'Update'}
+      </button>
+      <button
+        onClick={() => {
+          setId();
+          setNewData({
+            nama: '',
+            alamat: '',
+          });
+        }}
+      >
+        cancel
+      </button>
 
       {data.length > 0 &&
         data.map((item) => {
@@ -95,8 +132,18 @@ function Home() {
             <div key={item.id}>
               <h1>Nama Tamu: {item.nama}</h1>
               <p>Alamat Rumah: {item.alamat}</p>
-              <button>edit</button>
-              <button>delete</button>
+              <button
+                onClick={() => {
+                  setId(item.id);
+                  setNewData({
+                    nama: item.nama,
+                    alamat: item.alamat,
+                  });
+                }}
+              >
+                edit
+              </button>
+              <button onClick={() => deleteDataPost(item.id)}>delete</button>
             </div>
           );
         })}

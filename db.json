@@ -28,14 +28,19 @@
   },
   "tamu": [
     {
-      "nama": "test",
-      "alamat": "test",
-      "id": 1
+      "nama": "Alvian",
+      "alamat": "Jakarta123",
+      "id": 2
     },
     {
-      "nama": "Alvian",
+      "nama": "Dila",
       "alamat": "Jakarta",
-      "id": 2
+      "id": 3
+    },
+    {
+      "nama": "Jason",
+      "alamat": "Jakarta Timur",
+      "id": 4
     }
   ]
 }
