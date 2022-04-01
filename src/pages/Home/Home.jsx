@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 function Home() {
   const [data, setData] = React.useState([]);
+  const [id, setId] = React.useState();
   const [newData, setNewData] = React.useState({
     nama: '',
     alamat: '',
@@ -63,7 +64,6 @@ function Home() {
       console.log(error);
     }
   };
-  console.log(newData);
 
   return (
     <div>
@@ -95,6 +95,8 @@ function Home() {
             <div key={item.id}>
               <h1>Nama Tamu: {item.nama}</h1>
               <p>Alamat Rumah: {item.alamat}</p>
+              <button>edit</button>
+              <button>delete</button>
             </div>
           );
         })}
