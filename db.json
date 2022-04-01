@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Ini Percobaan",
+      "author": "Andika",
+      "id": 2
+    },
+    {
+      "title": "Ini Percobaan",
+      "author": "Andika",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tamu": [
+    {
+      "nama": "test",
+      "alamat": "test",
+      "id": 1
+    },
+    {
+      "nama": "Alvian",
+      "alamat": "Jakarta",
+      "id": 2
+    }
+  ]
+}
